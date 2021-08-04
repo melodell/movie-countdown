@@ -1,3 +1,5 @@
+# this file was used to perform PIN-Based OAuth verification and tests,
+# but nothing is dependent on this file.
 import os
 import tweepy
 from dotenv import load_dotenv
