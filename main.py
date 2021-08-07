@@ -22,7 +22,7 @@ def authenticate():
     return api
 
 
-# create and post the tweet 
+# create and post the tweet; returns days remaining to stop looping after the premiere arrives
 def postTweet(api):
 
     # calculate the days remaining
@@ -36,6 +36,8 @@ def postTweet(api):
     # choose a tweet format based on how many days remain
     if days_left == 0:
         tweet = "Today is the premiere of TUWOMT!!"
+    elif days_left == 1:
+        tweet = "There is " + str(days_left) + " day until TUWOMT!"
     elif days_left <= 100:
         tweet = "There are " + str(days_left) + " days until TUWOMT!"
     else:
@@ -49,14 +51,13 @@ def postTweet(api):
 
 def main():
 
+    # authenticate and access Twitter API
     api = authenticate()
 
-    ## create some sort of stopping mechanism here, combined with heroku scheduler?
-    ## LOOK UP SOME VIDEO TUTORIALS ABOUT HEROKU SCHEDULER 
-
+    # post the tweet
     postTweet(api)
 
-
+    # confirmation
     print("Done, check for tweet")
 
 
