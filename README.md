@@ -5,3 +5,6 @@ A simple Twitter bot to countdown the days for a movie premiere.
 ## Functionality
 Uses Tweepy API to send daily tweets to my bot, [@TUWOMTCountdown](https://twitter.com/TUWOMTCountdown), until the premiere arrives.
 Deployed to Heroku and scheduled to make daily tweets.
+
+## Post-Premiere Update
+Tweets were retweeted DAILY by the official movie account, [@NickCageMovie](https://twitter.com/NickCageMovie)!
